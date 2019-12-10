@@ -17,7 +17,7 @@ public class ClubUpdates : MonoBehaviour
         }
     }
 
-    public void improveProjecter()
+    public void improveProjector()
     {
         ClubManager.Funds -= 150;
         ClubManager.Reputation += 50;
