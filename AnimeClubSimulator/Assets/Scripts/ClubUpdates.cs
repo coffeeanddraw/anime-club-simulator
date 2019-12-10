@@ -66,7 +66,7 @@ public class ClubUpdates : MonoBehaviour
                 break;
         }
 
-        ClubManager.Funds -= 10; 
+        ClubManager.Funds -= 3; 
     }
     
     private int chanceOfProblem()

@@ -9,7 +9,7 @@ public class ClubManager : MonoBehaviour
     private static int reputation = 500;
     private static int funds = 500;
     private static int problems = 0;
-    private static string thisWeeksAnime = "";
+    private static string thisWeeksAnime = "No Metal Alchemists";
     
 
     // Getters & Setters for Initial Values //

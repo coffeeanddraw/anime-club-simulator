@@ -29,11 +29,11 @@ public class UIPlugIn : MonoBehaviour
 
     void PrintHUD()
     {
-        thisWeeksAnime.text = ClubManager.ThisWeeksAnime;
-        memberCount.text = ClubManager.MemberCount.ToString();
-        funds.text = ClubManager.Funds.ToString();
-        problems.text = ClubManager.Problems.ToString();
-        reputation.text = ClubManager.Reputation.ToString();
+        thisWeeksAnime.text = "This Week's Anime: " + ClubManager.ThisWeeksAnime;
+        memberCount.text = "Members: " + ClubManager.MemberCount.ToString();
+        funds.text = "Funds: " + ClubManager.Funds.ToString();
+        problems.text = "Problems: " + ClubManager.Problems.ToString();
+        reputation.text = "Reputation: " + ClubManager.Reputation.ToString();
     }
 
 }
