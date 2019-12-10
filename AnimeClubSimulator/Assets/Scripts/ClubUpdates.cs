@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClubUpdates : MonoBehaviour
 {
-    private string thisWeeksAnime = "";
     public void buySnack()
     {
         ClubManager.Funds -= 30;
@@ -39,34 +38,6 @@ public class ClubUpdates : MonoBehaviour
             Debug.Log("There was a paper jam.");
             ClubManager.Problems += 1; 
         }
-    }
-
-    public void chooseAnime()
-    {
-        // Add new anime here //
-        switch (thisWeeksAnime)
-        {
-            case "Naturo":
-                ClubManager.ThisWeeksAnime = "Naturo";
-                break;
-            case "Sailor Sun":
-                ClubManager.ThisWeeksAnime = "Sailor Sun";
-                break;
-            case "No Metal Alchemists":
-                ClubManager.ThisWeeksAnime = "No Metal Alchemists";
-                break;
-            case "Two Piece":
-                ClubManager.ThisWeeksAnime = "Two Piece";
-                break;
-            case "Life Note":
-                ClubManager.ThisWeeksAnime = "Life Note";
-                break;
-            case "Dragon's Balls":
-                ClubManager.ThisWeeksAnime = "Dragon's Balls";
-                break;
-        }
-
-        ClubManager.Funds -= 3; 
     }
     
     private int chanceOfProblem()
