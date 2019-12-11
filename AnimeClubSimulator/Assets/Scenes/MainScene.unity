@@ -969,7 +969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: SailorSun
         m_Mode: 1
         m_Arguments:
@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: DragonsBalls
         m_Mode: 1
         m_Arguments:
@@ -2433,6 +2433,7 @@ GameObject:
   - component: {fileID: 617605598}
   - component: {fileID: 617605597}
   - component: {fileID: 617605596}
+  - component: {fileID: 617605599}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -2565,6 +2566,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617605594}
   m_CullTransparentMesh: 0
+--- !u!114 &617605599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617605594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599a941640bfb8c43bdcaa63b4931061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &675249598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3716,7 +3729,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: LifeNote
         m_Mode: 1
         m_Arguments:
@@ -4811,7 +4824,6 @@ GameObject:
   - component: {fileID: 1477978544}
   - component: {fileID: 1477978543}
   - component: {fileID: 1477978542}
-  - component: {fileID: 1477978545}
   m_Layer: 5
   m_Name: NextWeeksAnimePanel
   m_TagString: Untagged
@@ -4902,18 +4914,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477978540}
   m_CullTransparentMesh: 0
---- !u!114 &1477978545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477978540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599a941640bfb8c43bdcaa63b4931061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1482788212
 GameObject:
   m_ObjectHideFlags: 0
@@ -6554,7 +6554,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: Naturo
         m_Mode: 1
         m_Arguments:
@@ -6686,7 +6686,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: TwoPiece
         m_Mode: 1
         m_Arguments:
@@ -6818,7 +6818,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477978545}
+      - m_Target: {fileID: 0}
         m_MethodName: NoMetalAlchemists
         m_Mode: 1
         m_Arguments:

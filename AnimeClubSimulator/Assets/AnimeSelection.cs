@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimeSelection : MonoBehaviour
 {
+    Dropdown m_Dropdown;
+
     private static string selectedAnime = "";
 
     public static string SelectedAnime
@@ -12,39 +15,43 @@ public class AnimeSelection : MonoBehaviour
         set { selectedAnime = value; }
     }
 
-    public void Naturo()
+    private void Start()
     {
-        selectedAnime = "Naturo";
-        Debug.Log("Next Week's Anime: Naturo");
+        // Fetch the Dropdown GameObject
+        m_Dropdown = GetComponent<Dropdown>();
+        // Add listner for when the value of the Dropdown changes, to take action 
+        m_Dropdown.onValueChanged.AddListener(delegate {
+            DropdownValueChanged(m_Dropdown);
+        });
     }
 
-    public void SailorSun()
+    void DropdownValueChanged(Dropdown change)
     {
-        selectedAnime = "Sailor Sun";
-        Debug.Log("Next Week's Anime: Sailor Sun");
-    }
+        Debug.Log(m_Dropdown.value);
 
-    public void NoMetalAlchemists()
-    {
-        selectedAnime = "No Metal Alchemists";
-        Debug.Log("Next Week's Anime: No Metal Alchemists");
-    }
+        // set selectedAnime value to selected dropdown value
+        switch(m_Dropdown.value)
+        {
+            case 0:
+                selectedAnime = "Naturo";
+                break;
+            case 1:
+                selectedAnime = "Sailor Sun";
+                break;
+            case 2:
+                selectedAnime = "No Metal Alchemists";
+                break;
+            case 3:
+                selectedAnime = "Two Piece";
+                break;
+            case 4:
+                selectedAnime = "Life Note";
+                break;
+            case 5:
+                selectedAnime = "Dragon's Balls";
+                break;
+        }
 
-    public void TwoPiece()
-    {
-        selectedAnime = "Two Piece";
-        Debug.Log("Next Week's Anime: Two Piece");
-    }
-
-    public void LifeNote()
-    {
-        selectedAnime = "Life Note";
-        Debug.Log("Next Week's Anime: Life Note");
-    }
-
-    public void DragonsBalls()
-    {
-        selectedAnime = "Dragon's Balls";
-        Debug.Log("Next Week's Anime: Dragon's Balls");
+        Debug.Log(selectedAnime);
     }
 }
