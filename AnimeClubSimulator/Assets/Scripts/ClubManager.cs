@@ -6,7 +6,7 @@ public class ClubManager : MonoBehaviour
 {
     // Initial Values //
     private static int memberCount = 5;
-    private static int reputation = 500;
+    private static int reputation = 0;
     private static int funds = 500;
     private static int problems = 0;
     private static string thisWeeksAnime = "No Metal Alchemists";
