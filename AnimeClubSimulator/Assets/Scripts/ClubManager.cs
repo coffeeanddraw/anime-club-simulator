@@ -10,7 +10,8 @@ public class ClubManager : MonoBehaviour
     private static int funds = 500;
     private static int problems = 0;
     private static string thisWeeksAnime = "No Metal Alchemists";
-    private static int week = 1; 
+    private static int week = 1;
+    private static string notificationText = "";
     
 
     // Getters & Setters for Initial Values //
@@ -47,5 +48,11 @@ public class ClubManager : MonoBehaviour
     {
         get { return week; }
         set { week = value; }
+    }
+
+    public static string NotificationText
+    {
+        get { return notificationText; }
+        set { notificationText = value; }
     }
 }
