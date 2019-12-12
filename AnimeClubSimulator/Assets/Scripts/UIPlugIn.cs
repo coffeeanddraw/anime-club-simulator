@@ -25,6 +25,12 @@ public class UIPlugIn : MonoBehaviour
     [SerializeField]
     private Text notificationText = null;
 
+    [SerializeField]
+    private GameObject positiveTroubleshootPanel = null;
+
+    [SerializeField]
+    private GameObject negativeTroubleshootPanel = null;
+
     void Awake()
     {
         notificationText.text = "";
@@ -43,6 +49,17 @@ public class UIPlugIn : MonoBehaviour
         problems.text = "Problems: " + ClubManager.Problems.ToString();
         reputation.text = "Reputation: " + ClubManager.Reputation.ToString();
         notificationText.text = ClubManager.NotificationText;
+
+        if (ClubManager.Problems > 0)
+        {
+            negativeTroubleshootPanel.SetActive(false);
+            positiveTroubleshootPanel.SetActive(true); 
+        }
+        else
+        {
+            positiveTroubleshootPanel.SetActive(false);
+            negativeTroubleshootPanel.SetActive(true);
+        }
     }
 
 }
