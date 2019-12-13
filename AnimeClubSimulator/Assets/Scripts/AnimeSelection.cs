@@ -27,7 +27,6 @@ public class AnimeSelection : MonoBehaviour
 
     void DropdownValueChanged(Dropdown change)
     {
-        Debug.Log(m_Dropdown.value);
 
         // set selectedAnime value to selected dropdown value
         switch(m_Dropdown.value)

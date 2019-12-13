@@ -14,12 +14,30 @@ public class EndWeek : MonoBehaviour
     [SerializeField]
     Toggle m_ToggleFour = null;
 
+    [SerializeField]
+    GameObject winCanvas = null;
+    [SerializeField]
+    GameObject loseCanvas = null;
+
     public void EndWeekClick()
     {
         ClubManager.ThisWeeksAnime = AnimeSelection.SelectedAnime;
+
         ClubManager.Funds -= ClubUpdates.SelectedFunds;
+
+        // Fundraiser
+
+        if (Fundraiser.SelectedFundraiserIncome != 0)
+        {
+            ClubManager.Funds += Fundraiser.SelectedFundraiserIncome;
+            Fundraiser.SelectedFundraiserIncome = 0;
+            Fundraiser.CurrentFundraiser += 1; // count fundraiser number to check if the max fundraiser number has been met 
+        }
+        
+
         ClubManager.Reputation += ClubUpdates.SelectedReputation;
         ClubManager.Problems += ClubUpdates.SelectedProblems;
+
         ClubUpdates.SelectedPrice = 0;
 
         m_ToggleOne.isOn = false;
@@ -34,6 +52,18 @@ public class EndWeek : MonoBehaviour
         ClubUpdates.SelectedProblems = 0;
 
         Debug.Log("End week");
+
+        // Win State //
+        if (ClubManager.MemberCount >= 52)
+        {
+            winCanvas.SetActive(true);
+        }
+
+        // Lose State // 
+        if (ClubManager.Funds <= 0 && Fundraiser.FundraiserMaxReached || ClubManager.Problems == 10)
+        {
+            loseCanvas.SetActive(true);
+        }
     }
 
     private void AddNewMembers()
