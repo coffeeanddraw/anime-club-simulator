@@ -19,8 +19,19 @@ public class EndWeek : MonoBehaviour
     [SerializeField]
     GameObject loseCanvas = null;
 
+    [SerializeField]
+    AudioClip buttonAudio = null;
+
+    private AudioSource buttonAudioSource;
+    public void Awake()
+    {
+        buttonAudioSource = GetComponent<AudioSource>();
+    }
+
     public void EndWeekClick()
     {
+        buttonAudioSource.PlayOneShot(buttonAudio);
+
         ClubManager.ThisWeeksAnime = AnimeSelection.SelectedAnime;
 
         ClubManager.Funds -= ClubUpdates.SelectedFunds;
